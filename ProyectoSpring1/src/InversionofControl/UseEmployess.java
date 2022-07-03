@@ -7,11 +7,12 @@ public class UseEmployess {
 		
 		//Creación de objetos de tipo empleado
 		
-		BossEmployee Employee1= new BossEmployee();
+		Employees Employee1= new DirectorEmployee();
 		
 		//Uso de los objetos creados
 		
 		System.out.println(Employee1.getTasks());
+		
 	}
 
 }

@@ -1,6 +1,6 @@
 package InversionofControl;
 
-public class BossEmployee {
+public class BossEmployee implements Employees {
 	
 	public String getTasks() {
 		
