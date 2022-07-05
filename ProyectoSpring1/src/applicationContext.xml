@@ -23,6 +23,8 @@
 <bean id="mySecretaryEmployee" class="InversionofControl.SecretaryEmployee">
 
 	<property name="newReport" ref="myReport"></property>
+	<property name="email" value="secretariaempresa@email.com"></property>
+	<property name="companyName" value="Nombre de laEmpresa"></property>
 </bean>
 
 </beans>

@@ -19,7 +19,7 @@ public class UseEmployess {
 		
 		ClassPathXmlApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		/*
+		/*  Hasta clase 9
 		Employees Juan = context.getBean("myEmployee", Employees.class);
 
 		
@@ -29,6 +29,8 @@ public class UseEmployess {
 		
 		context.close();
 		*/
+		
+		/* Clase 10
 		Employees Manuel = context.getBean("mySecretaryEmployee", Employees.class);
 		
 		System.out.println(Manuel.getTasks());
@@ -36,6 +38,18 @@ public class UseEmployess {
 		System.out.println(Manuel.getReport());
 		
 		context.close();
+		
+		*/
+		
+		SecretaryEmployee Manuel = context.getBean("mySecretaryEmployee", SecretaryEmployee.class);
+		
+		System.out.println(Manuel.getTasks());
+		System.out.println(Manuel.getReport());
+		System.out.println("Company name: "+Manuel.getCompanyName());
+		System.out.println("Company mail: "+Manuel.getEmail());
+		
+		context.close();
+		
 	}
 
 }
