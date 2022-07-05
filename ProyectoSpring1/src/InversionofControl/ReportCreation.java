@@ -1,8 +1,6 @@
 package InversionofControl;
 
-public interface Employees {
-	
-	public String getTasks();
+public interface ReportCreation {
 	
 	public String getReport();
 

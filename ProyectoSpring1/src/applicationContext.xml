@@ -9,9 +9,12 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 
-<bean id="myEmployee" class="InversionofControl.DirectorEmployee">
+<!--  creación de la dependencia -->
+<bean id="myReport" class="InversionofControl.Report"></bean>
 
+<bean id="myEmployee" class="InversionofControl.BossEmployee">
 
+<constructor-arg ref="myReport"></constructor-arg>
 </bean>
 
 

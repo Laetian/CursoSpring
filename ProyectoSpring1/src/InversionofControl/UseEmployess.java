@@ -23,6 +23,8 @@ public class UseEmployess {
 		
 		System.out.println(Juan.getTasks());
 		
+		System.out.println(Juan.getReport());
+		
 		context.close();
 	}
 
