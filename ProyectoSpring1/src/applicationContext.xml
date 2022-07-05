@@ -12,10 +12,17 @@
 <!--  creación de la dependencia -->
 <bean id="myReport" class="InversionofControl.Report"></bean>
 
+
+<!--  creación de la dependencia(con constructor) -->
 <bean id="myEmployee" class="InversionofControl.BossEmployee">
 
-<constructor-arg ref="myReport"></constructor-arg>
+	<constructor-arg ref="myReport"></constructor-arg>
 </bean>
 
+<!--  creación de la dependencia(con setter) -->
+<bean id="mySecretaryEmployee" class="InversionofControl.SecretaryEmployee">
+
+	<property name="newReport" ref="myReport"></property>
+</bean>
 
 </beans>

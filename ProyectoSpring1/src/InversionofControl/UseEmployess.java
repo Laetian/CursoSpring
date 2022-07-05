@@ -19,11 +19,21 @@ public class UseEmployess {
 		
 		ClassPathXmlApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
 		
+		/*
 		Employees Juan = context.getBean("myEmployee", Employees.class);
+
 		
 		System.out.println(Juan.getTasks());
 		
 		System.out.println(Juan.getReport());
+		
+		context.close();
+		*/
+		Employees Manuel = context.getBean("mySecretaryEmployee", Employees.class);
+		
+		System.out.println(Manuel.getTasks());
+		
+		System.out.println(Manuel.getReport());
 		
 		context.close();
 	}
