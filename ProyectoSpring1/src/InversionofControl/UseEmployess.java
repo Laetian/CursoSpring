@@ -38,15 +38,23 @@ public class UseEmployess {
 		System.out.println(Manuel.getReport());
 		
 		context.close();
-		
 		*/
 		
+		/* Clase 11
 		SecretaryEmployee Manuel = context.getBean("mySecretaryEmployee", SecretaryEmployee.class);
 		
 		System.out.println(Manuel.getTasks());
 		System.out.println(Manuel.getReport());
 		System.out.println("Company name: "+Manuel.getCompanyName());
 		System.out.println("Company mail: "+Manuel.getEmail());
+		*/
+		DirectorEmployee Manuel = context.getBean("myEmployee", DirectorEmployee.class);
+		
+		System.out.println(Manuel.getTasks());
+		System.out.println(Manuel.getReport());
+		System.out.println("Company name: "+Manuel.getCompanyName());
+		System.out.println("Company mail: "+Manuel.getEmail());
+		
 		
 		context.close();
 		

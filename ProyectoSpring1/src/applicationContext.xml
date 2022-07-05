@@ -9,14 +9,18 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 
+<context:property-placeholder location="classpath:companyData.properties"/>
+
 <!--  creación de la dependencia -->
 <bean id="myReport" class="InversionofControl.Report"></bean>
 
 
 <!--  creación de la dependencia(con constructor) -->
-<bean id="myEmployee" class="InversionofControl.BossEmployee">
+<bean id="myEmployee" class="InversionofControl.DirectorEmployee">
 
 	<constructor-arg ref="myReport"></constructor-arg>
+	<property name="email" value="${email}"></property>
+	<property name="companyName" value="${companyName}"></property>
 </bean>
 
 <!--  creación de la dependencia(con setter) -->
