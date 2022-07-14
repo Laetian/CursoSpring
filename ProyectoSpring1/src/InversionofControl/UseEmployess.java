@@ -17,6 +17,8 @@ public class UseEmployess {
 		System.out.println(Employee1.getTasks());
 		*/
 		
+		
+		//Carga del xml de configuración
 		ClassPathXmlApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		/*  Hasta clase 9
