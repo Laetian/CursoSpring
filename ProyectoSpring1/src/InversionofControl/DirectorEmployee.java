@@ -39,5 +39,20 @@ public class DirectorEmployee implements Employees {
 		// TODO Auto-generated method stub
 		return "Report created by director: "+ newReport.getReport();
 	}
+	
+	//Crear método init. Ejecutar tareas justo antes que el bean este disponible
+	
+	public void initialMethod() {
+		
+		System.out.println("Dentro del método Init, aquí irían las tareas a ejecutar antes de que el bean esté listo");
+	}
+	
+	
+	//Método Destroy. Ejecutar tareas después de que el bean haya sido utilizado
+	
+public void finalMethod() {
+		
+		System.out.println("Dentro del método Destroy, aquí irían las tareas a ejecutar después de utilizar el bean");
+	}
 
 }
