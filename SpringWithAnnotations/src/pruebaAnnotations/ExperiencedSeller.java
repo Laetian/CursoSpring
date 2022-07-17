@@ -8,12 +8,16 @@ import org.springframework.stereotype.Component;
 @Component("ExperiencedSeller")
 public class ExperiencedSeller implements Employees {
 
+	
+	/*
 	//En el caso de tener un único constructor no es necesaria la anotacion @Autowired a partir de Spring 4.3
 	@Autowired
 	public ExperiencedSeller(CreateFinancialReport newFinancialReport) {
 		this.newFinancialReport = newFinancialReport;
 	}
-
+	*/
+	
+	
 	@Override
 	public String getTasks() {
 		// TODO Auto-generated method stub
@@ -27,6 +31,14 @@ public class ExperiencedSeller implements Employees {
 		return newFinancialReport.getFinalcialReport();
 	}
 	
+	@Autowired
 	private CreateFinancialReport newFinancialReport;
+	
+	/*
+	@Autowired
+	public void setNewFinancialReport(CreateFinancialReport newFinancialReport) {
+		this.newFinancialReport = newFinancialReport;
+	}
+	*/
 
 }
