@@ -1,6 +1,6 @@
 package pruebaAnnotations;
 
-
+import org.springframework.beans.factory.annotation.Value;
 
 public class FinancialDirector implements Employees {
 
@@ -21,5 +21,20 @@ public class FinancialDirector implements Employees {
 	public FinancialDirector(CreateFinancialReport financialReport) {
 		this.financialReport = financialReport;
 	}
+	
+	@Value("${email}")
+	private String email;
+	
+	@Value("${companyName}")
+	private String companyName;
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+	
 	
 }

@@ -17,10 +17,18 @@ public class UseAnnotations2 {
 		//Segundo paso pedir beans al contenedor
 		
 		
+		FinancialDirector employee=context.getBean("financialDirector", FinancialDirector.class);
+		
+		System.out.println("Email del director: "+ employee.getEmail());
+		System.out.println("Nombre de la empresa: "+ employee.getCompanyName());
+		/*
 		Employees employee=context.getBean("financialDirector", Employees.class);
 		
 		System.out.println(employee.getTasks());
 		System.out.println(employee.getReport());
+		*/
+		
+		
 		/*
 		
 		Employees Antonio=context.getBean("ExperiencedSeller", Employees.class);
