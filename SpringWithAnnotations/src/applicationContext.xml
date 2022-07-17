@@ -9,26 +9,8 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 
-<context:property-placeholder location="classpath:companyData.properties"/>
+<!-- indicamos a Spring que debe buscar las annotations -->
 
-<!--  creación de la dependencia -->
-<bean id="myReport" class="InversionofControl.Report"></bean>
-
-
-<!--  creación de la dependencia(con constructor) -->
-<bean id="myEmployee" class="InversionofControl.DirectorEmployee">
-
-	<constructor-arg ref="myReport"></constructor-arg>
-	<property name="email" value="${email}"></property>
-	<property name="companyName" value="${companyName}"></property>
-</bean>
-
-<!--  creación de la dependencia(con setter) -->
-<bean id="mySecretaryEmployee" class="InversionofControl.SecretaryEmployee">
-
-	<property name="newReport" ref="myReport"></property>
-	<property name="email" value="secretariaempresa@email.com"></property>
-	<property name="companyName" value="Nombre de laEmpresa"></property>
-</bean>
+	<context:component-scan base-package="pruebaAnnotations"></context:component-scan>
 
 </beans>
