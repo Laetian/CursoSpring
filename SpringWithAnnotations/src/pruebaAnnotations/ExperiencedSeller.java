@@ -2,11 +2,13 @@ package pruebaAnnotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
 //Podemos no darle un ID al bean, en este caso cogería el nombre de la clase con la primera letra en minúscula
 @Component("ExperiencedSeller")
+@Scope("prototype")
 public class ExperiencedSeller implements Employees {
 
 	
