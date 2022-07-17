@@ -1,5 +1,9 @@
 package pruebaAnnotations;
 
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -8,10 +12,26 @@ import org.springframework.stereotype.Component;
 
 //Podemos no darle un ID al bean, en este caso cogería el nombre de la clase con la primera letra en minúscula
 @Component("ExperiencedSeller")
-@Scope("prototype")
+//@Scope("prototype")
 public class ExperiencedSeller implements Employees {
 
 	
+	/*
+	 * A partir de Java 9 las anotaciones @PostConstruct y @PreDestroy quedan obsoletas al pertenecer a Java ee
+	 * Para poder utilizarlas debemos importar  java.annotation-api-1.3.2.jar 
+	 */
+	//Ejecución de código de ceación del Bean
+	
+	@PostConstruct
+	public void executeAfterCreation() {
+		System.out.println("Executed after creation of the bean");
+	}
+	// Ejecución de código despùés de apagado contenedor Spring
+	
+	@PreDestroy
+	public void executeAfterDestruction() {
+		System.out.println("Executed after bean destruction");
+	}
 	/*
 	//En el caso de tener un único constructor no es necesaria la anotacion @Autowired a partir de Spring 4.3
 	@Autowired
