@@ -16,6 +16,13 @@ public class UseAnnotations2 {
 		
 		//Segundo paso pedir beans al contenedor
 		
+		
+		Employees employee=context.getBean("financialDirector", Employees.class);
+		
+		System.out.println(employee.getTasks());
+		System.out.println(employee.getReport());
+		/*
+		
 		Employees Antonio=context.getBean("ExperiencedSeller", Employees.class);
 		
 		Employees Lucia=context.getBean("ExperiencedSeller", Employees.class);
@@ -29,7 +36,7 @@ public class UseAnnotations2 {
 			System.out.println("No apuntan al mismo lugar");
 			System.out.println(Antonio + "\n" +Lucia);
 		}
-		
+		*/
 		
 		//cerrar el contexto
 		
