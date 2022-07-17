@@ -1,5 +1,6 @@
 package pruebaAnnotations;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UseAnnotations2 {
@@ -7,7 +8,11 @@ public class UseAnnotations2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+		//ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		//Leer el class de configuración
+		
+		AnnotationConfigApplicationContext context= new AnnotationConfigApplicationContext(EmployeesConfig.class);
 		
 		//Segundo paso pedir beans al contenedor
 		
