@@ -1,6 +1,7 @@
 package pruebaAnnotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 
@@ -32,6 +33,7 @@ public class ExperiencedSeller implements Employees {
 	}
 	
 	@Autowired
+	@Qualifier("financialReportTrimester4")
 	private CreateFinancialReport newFinancialReport;
 	
 	/*
