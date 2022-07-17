@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component("ExperiencedSeller")
 public class ExperiencedSeller implements Employees {
 
+	//En el caso de tener un único constructor no es necesaria la anotacion @Autowired a partir de Spring 4.3
 	@Autowired
 	public ExperiencedSeller(CreateFinancialReport newFinancialReport) {
 		this.newFinancialReport = newFinancialReport;
