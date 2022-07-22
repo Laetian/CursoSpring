@@ -1,6 +1,6 @@
 package spring.mvc;
 
 @Controller
-public class Controller {
+public class Control {
 
 }
