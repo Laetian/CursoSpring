@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<h1>
-
-First sample MVC with Spring
-</h1>
-
-<a href="showForm">Go to the form</a>
+	<form action="processForm" method="get">
+	
+		<input type="text" name="namePupil">
+		
+		<input type="submit">
+		
+	</form>
 </body>
 </html>

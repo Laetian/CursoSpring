@@ -8,11 +8,7 @@
 </head>
 <body>
 
-<h1>
+Hola ${param.namePupil }. Welcome to Spring course
 
-First sample MVC with Spring
-</h1>
-
-<a href="showForm">Go to the form</a>
 </body>
 </html>
