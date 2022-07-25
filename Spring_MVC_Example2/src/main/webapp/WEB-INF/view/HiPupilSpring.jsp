@@ -10,5 +10,13 @@
 
 Hola ${param.namePupil }. Welcome to Spring course
 
+<p><br>
+
+<h2>Attention</h2>
+
+${finalMessage}
+
+<p>
+
 </body>
 </html>
